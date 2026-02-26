@@ -1,0 +1,612 @@
+<!doctype html>
+<html>
+ <head> 
+  <title>龙江先锋网</title> 
+  <meta charset="UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=edge"> 
+  <link rel="shortcut icon" href="css/logo.png"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+  <!-- 引入 Bootstrapcscs --> 
+  <link href="css/bootstrap.min.css" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/layui.css"> 
+  <link href="css/offcanvas.min.css" rel="stylesheet"> 
+  <link href="css/idangerous.swiper.css" rel="stylesheet"> 
+  <link href="css/style.css" rel="stylesheet"> 
+  <!-- HTML5 Shiv 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 --> 
+  <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 --> 
+  <!--[if lt IE 9]>
+      <script src="css/bootstrap/libs/html5shiv.js"></script>
+      <script src="css/bootstrap/libs/respond.min.js"></script>
+    <![endif]--> 
+ </head> 
+ <body> 
+  <div class="header"> 
+   <div class="miniNav"></div> 
+   <div class="banner"> 
+    <div class="banner_line"></div> 
+    <!--
+				<div class="logo">
+					<div class="container" id="logoImg"><img src="images/index/logo.png" style="width:40%"></div>
+				</div>
+			--> 
+    <div class="flash"> 
+     <ul id="topBanner" style="display: block;"> 
+     </ul> 
+    </div> 
+   </div> 
+   <div class="menuBg"> 
+    <div class="container marNavTop"> 
+     <div class="overlay"></div> 
+     <nav class="navbar navbar-inverse navbar-static-top"> 
+      <div class="container"> 
+       <div class="navbar-header"> 
+        <button type="button" class="navbar-toggle collapsed pull-right" data-toggle="offcanvas"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+       </div> 
+       <div id="navbar" class="collapse navbar-collapse sidebar-offcanvas oml"> 
+        <ul class="nav navbar-nav" id="daohang"> 
+         <li class="active"> <a href="index.html">先锋首页</a> </li> 
+        </ul> 
+        <!-- 搜索挪到这个位置 --> 
+        <div id="sousuoHtml"></div> 
+       </div> 
+       <!--/.nav-collapse --> 
+      </div> 
+     </nav> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="indexbody"> 
+   <!--header star--> 
+   <!--<div class="header">--> 
+   <!--<div class="miniNav"></div>--> 
+   <!--<div class="container marNavTop">--> 
+   <!--<div class="overlay"></div>
+			<nav class="navbar navbar-inverse navbar-static-top">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed pull-right" data-toggle="offcanvas">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div id="navbar" class="collapse navbar-collapse sidebar-offcanvas oml">
+						<ul class="nav navbar-nav" id="daohang">
+							<li class="active">
+								<a href="index.html">先锋首页</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>--> 
+   <!--</div>--> 
+   <!--header end--> 
+   <!--main star--> 
+   <div class="container mainWhiteBg"> 
+    <div class="row"> 
+     <!-- 改版去掉 start --> 
+     <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marTop15" id="topicTop"> --> 
+     <!-- <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 phone_marb">
+						<a href="#"><img src="images/index/home_top_spirit_img1.png"></a>
+						</div> --> 
+     <!-- </div> --> 
+     <!-- 改版去掉 end --> 
+     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marTop15 phonePad10"> 
+      <div class="notice" id="leadNews"> 
+       <!--<img src="../images/index/home_new_img.png" />
+					<h1><a href=""></a></h1>
+						<p></p>--> 
+      </div> 
+     </div> 
+     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marTop15 swiperNav"> 
+      <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 phone_marb swiperHeight"> 
+       <div class="swiper-container swiper1"> 
+        <div class="swiper-wrapper" id="hightLightsImg"> 
+         <!--<div class="swiper-slide"> 
+															<img src="images/index/home_new_main_img.png">
+															<p class="tp_title"><span>1</span> </p>
+														</div>--> 
+        </div> 
+        <div class="pagination" id="pagination"></div> 
+       </div> 
+      </div> 
+      <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12"> 
+       <ul id="myTab" class="nav nav-tabs"> 
+        <!-- <li class="active">
+									<a href="" target="_blank" id="highLightsTab">要闻聚焦</a>
+								</li> --> 
+        <li class="active"> <a href="" target="_blank" id="highRiseTab">中央声音</a> </li> 
+        <li> <a href="" target="_blank" id="importantNewsTab">龙江要闻</a> </li> 
+        <li> <a href="" target="_blank" id="leaderActivitiesTab">部领导活动</a> </li> 
+       </ul> 
+       <div id="myTabContent" class="tab-content"> 
+        <!-- <div class="tab-pane fade in active marTop20" id="tab_ywjj">
+										
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<ul class="newList" id="hightLights">
+												<li>
+																			<div class="data"><span>01</span><span>2019-08</span></div>
+																			<div class="text">
+																				<h4><a href="#">陈安丽在我省第七批援藏干部人才欢送会上强调：强化政治担当 尽快融合融入 确保高质量完成好我省对口援藏工作任务</a></h4>
+																				<p>7月13日下午，省委在哈尔滨召开我省第七批援藏干部人才欢送会，省委常委、组织部部长陈安丽出席会议并讲话。省委常委、组织部部长陈安丽出席会议并讲话。</p>
+																			</div>
+																		</li>
+											</ul>
+										</div>
+									</div> --> 
+        <div class="tab-pane fade in active marTop20" id="tab_gcsy"> 
+         <!-- <div class="
+														col-lg-7 col-md-7 col-sm-7 col-xs-12
+														phone_marb
+														swiperHeight
+													" id="highRiseImg">
+										</div> --> 
+         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+          <ul class="newList" id="highRise"> 
+           <!--<li>
+																			<div class="data"><span>09</span><span>2019-08</span></div>
+																			<div class="text">
+																				<h4><a href="#">陈安丽在我省第七批援藏干部人才欢送会上强调：强化政治担当 尽快融合融入 确保高质量完成好我省对口援藏工作任务</a></h4>
+																				<p>7月13日下午，省委在哈尔滨召开我省第七批援藏干部人才欢送会，省委常委、组织部部长陈安丽出席会议并讲话。省委常委、组织部部长陈安丽出席会议并讲话。</p>
+																			</div>
+																		</li>--> 
+          </ul> 
+         </div> 
+        </div> 
+        <!--<div class="tab-pane fade marTop20" id="tab_ddh">
+																	<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 phone_marb swiperHeight " id="dlhImg">
+																		<img src="" />
+																				<p class="tp_title tp_title1">
+																					<span></span> </p>
+																	</div>
+																	<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+																		<ul class="newList" id="dlh">
+																			<li>
+																						<div class="data"><span>09</span><span>2019-08</span></div>
+																						<div class="text">
+																							<h4><a href="#">陈安丽在我省第七批援藏干部人才欢送会上强调：强化政治担当 尽快融合融入 确保高质量完成好我省对口援藏工作任务</a></h4>
+																							<p>7月13日下午，省委在哈尔滨召开我省第七批援藏干部人才欢送会，省委常委、组织部部长陈安丽出席会议并讲话。省委常委、组织部部长陈安丽出席会议并讲话。</p>
+																						</div>
+																					</li>
+																		</ul>
+																	</div>
+																</div>--> 
+        <div class="tab-pane fade marTop20" id="tab_ljyw"> 
+         <!-- <div class="
+														col-lg-7 col-md-7 col-sm-7 col-xs-12
+														phone_marb
+														swiperHeight
+													" id="importantNewsImg">
+											<img src="">
+																	<p class="tp_title tp_title1"><span>第三个单独一个图片</span> </p>
+										</div> --> 
+         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+          <ul class="newList" id="importantNews"> 
+           <!--<li>
+																			<div class="data"><span>11</span><span>2019-08</span></div>
+																			<div class="text">
+																				<h4><a href="#">陈安丽在我省第七批援藏干部人才欢送会上强调：强化政治担当 尽快融合融入 确保高质量完成好我省对口援藏工作任务</a></h4>
+																				<p>7月13日下午，省委在哈尔滨召开我省第七批援藏干部人才欢送会，省委常委、组织部部长陈安丽出席会议并讲话。省委常委、组织部部长陈安丽出席会议并讲话。</p>
+																			</div>
+																		</li>--> 
+          </ul> 
+         </div> 
+        </div> 
+        <div class="tab-pane fade marTop20" id="tab_bldhd"> 
+         <!-- <div class="
+														col-lg-7 col-md-7 col-sm-7 col-xs-12
+														phone_marb
+														swiperHeight
+													" id="apiUrl">
+											<img src="images/index/home_entry_img9.png">
+																	<p class="tp_title tp_title1"><span>第四个单独一个图片</span> </p>
+										</div> --> 
+         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+          <ul class="newList" id="leaderActivities"> 
+           <!--<li>
+																			<div class="data"><span>29</span><span>2019-08</span></div>
+																			<div class="text">
+																				<h4><a href="#">陈安丽在我省第七批援藏干部人才欢送会上强调：强化政治担当 尽快融合融入 确保高质量完成好我省对口援藏工作任务</a></h4>
+																				<p>7月13日下午，省委在哈尔滨召开我省第七批援藏干部人才欢送会，省委常委、组织部部长陈安丽出席会议并讲话。省委常委、组织部部长陈安丽出席会议并讲话。</p>
+																			</div>
+																		</li>--> 
+          </ul> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <!--TODO 顶部 通栏广告01 新增 --> 
+     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marTop10 swiperHeightGuanggao01"> 
+      <div class="swiper-container swiper_guanggao01"> 
+       <div class="swiper-wrapper" id="topicTop1"> 
+        <!-- <div class="swiper-slide"> 
+									<img src="images/index/2023guoan.png">
+								</div>
+								<div class="swiper-slide"> 
+									<img src="images/index/home_new_main_img.png">
+								</div>
+								<div class="swiper-slide"> 
+									<img src="images/index/home_new_main_img.png">
+								</div> --> 
+       </div> 
+       <div class="pagination" id="pagination_guanggao01"></div> 
+      </div> 
+     </div> 
+     <!-- TODO 新增组工动态 --> 
+     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 marTop10"> 
+      <!-- 组工动态 --> 
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+       <div class="sameTitle"> 
+        <a id="zgydTab_title">组工动态</a> 
+       </div> 
+       <div> 
+        <ul class="newsList" id="zgydTabContent"> 
+         <!--<li>
+									<a href="#">新林区三举措推进支部标准化、规范化建设</a>
+								</li>--> 
+        </ul> 
+        <!--<div class="newsListImg">
+								<div><a href="statistics.html" target="_blank"><img
+											src="images/index/home_titile_bg1_icon1.png"></a></div>
+								<div><a id="openPrejudge" href="" target="_blank"><img
+											src="images/index/home_titile_bg1_icon2.png"></a></div>
+							</div>--> 
+       </div> 
+      </div> 
+      <!-- 通知公告 --> 
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style=" margin-top: 25px;"> 
+       <div class="sameTitle" style="display: flex; justify-content: space-between;"> 
+        <a id="notice_title">通知公告</a> 
+        <a href="https://zk.ljxfw.gov.cn/bmxt-student/views/welcome.html" target="_blank" id="notice_title" style="background: url(images/sprite.png) no-repeat; 
+								    background-position: 0 -1228px;">网上报名系统</a> 
+       </div> 
+       <div> 
+        <ul class="newsList" id="notice"> 
+         <!--<li>
+									<a href="#">新林区三举措推进支部标准化、规范化建设</a>
+								</li>--> 
+        </ul> 
+        <!--<div class="newsListImg">
+								<div><a href="statistics.html" target="_blank"><img
+											src="images/index/home_titile_bg1_icon1.png"></a></div>
+								<div><a id="openPrejudge" href="" target="_blank"><img
+											src="images/index/home_titile_bg1_icon2.png"></a></div>
+							</div>--> 
+       </div> 
+      </div> 
+     </div> 
+     <!--TODO 横幅 通栏广告02 新增 --> 
+     <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marTop10 swiperHeightGuanggao01">
+						<div class="swiper-container swiper_guanggao02">
+							<div class="swiper-wrapper" id="topicHengfu">
+							</div>
+							<div class="pagination" id="pagination_guanggao02"></div>
+						</div>
+					</div> --> 
+     <!--TODO 通知公告 新增 --> 
+     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 marTop10"> 
+      <!-- 干部公示 --> 
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+        <div class="sameTitle"> 
+         <a id="cadresPublic_title">干部公示</a> 
+        </div> 
+        <!-- <div class="sameHeight64"> --> 
+        <ul class="newsList" id="cadresPublic"> 
+        </ul> 
+        <!-- </div> --> 
+       </div> 
+       <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<div class="sameTitle">
+									<a href="https://www.ljxfw.gov.cn/yjsgk/generalListPage.html?sid=C6500FB7B571E1679C488E1E46E34A5E" target="_blank">预决算公开</a>
+								</div>
+								<div class="sameHeight64">
+									<ul class="newsList" id="yjsgk_content">
+									</ul>
+								</div>
+							</div> --> 
+      </div> 
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 guanggao03" id="topicMid" style="padding-right:0;height: auto;"> 
+       <!-- <a href="#">
+								<img src="images/index/home_new_main_img.png">
+							</a> --> 
+      </div> 
+      <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 20px;padding-right: 0;">
+							<a href="/ljxfwWeb/videoList.html?pid=200FE565DE86393160BD2CB1C430D602&sid=200FE565DE86393160BD2CB1C430D602">
+								<img src="images/index/dangyuanjiaoyu.png" style="width: 100%;">
+							</a>
+						</div> --> 
+     </div> 
+     <!-- 固定 --> 
+     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marTop10 guanggao04"> 
+      <a href="https://www.hljgbjy.org.cn/" target="_blank"> <img src="images/index_img_01.png"> 黑龙江省干部教育网络学院 </a> 
+      <a href="https://www.12371.cn/" target="_blank"> <img src="images/index_img_02.png"> 共产党员网 </a> 
+     </div> 
+     <!-- 底部 --> 
+     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marTop20 guanggao05" id="topicBottom"> 
+      <!-- <a href="#">
+							<img src="images/index/home_new_main_img.png">
+						</a>
+						<a href="#">
+							<img src="images/index/home_new_main_img.png">
+						</a>
+						<a href="#">
+							<img src="images/index/home_new_main_img.png">
+						</a>
+						<a href="#">
+							<img src="images/index/home_new_main_img.png">
+						</a>
+						<a href="#">
+							<img src="images/index/home_new_main_img.png">
+						</a>
+						<a href="#">
+							<img src="images/index/home_new_main_img.png">
+						</a>
+						<a href="#">
+							<img src="images/index/home_new_main_img.png">
+						</a>
+						<a href="#">
+							<img src="images/index/home_new_main_img.png">
+						</a> --> 
+     </div> 
+     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marTop20"> 
+      <div class="titleTonglan"> 
+       <h3>龙江党网联盟</h3> 
+      </div> 
+     </div> 
+     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marTop20"> 
+      <ul class="partyBuild clearfix"> 
+       <li class="hrbxfw"> <a href="javascript:void(0)"> 
+         <!-- <img src="images/index/icon_01_hrb.png" /> --> <span></span> <p>哈尔滨</p> </a> </li> 
+       <li class="qqhrr"> <a href="javascript:void(0)"> 
+         <!-- <img src="images/index/icon_02_qqhr.png" /> --> <span></span> <p>齐齐哈尔</p> </a> </li> 
+       <li class="mdjswzzb"> <a href="javascript:void(0)"> 
+         <!-- <img src="images/index/icon_03_mdj.png" /> --> <span></span> <p>牡丹江</p> </a> </li> 
+       <li class="jmsdj"> <a href="javascript:void(0)"> 
+         <!-- <img src="images/index/icon_04_jms.png" /> --> <span></span> <p>佳木斯</p> </a> </li> 
+       <li class="dqq"> <a href="javascript:void(0)"> 
+         <!-- <img src="images/index/icon_05_dq.png" /> --> <span></span> <p>大庆</p> </a> </li> 
+       <li class="jxx"> <a href="javascript:void(0)"> 
+         <!-- <img src="images/index/icon_06_jx.png" /> --> <span></span> <p>鸡西</p> </a> </li> 
+       <li class="syss"> <a href="javascript:void(0)"> 
+         <!-- <img src="images/index/icon_07_sys.png" /> --> <span></span> <p>双鸭山</p> </a> </li> 
+       <li class="ycc"> <a href="javascript:void(0)"> 
+         <!-- <img src="images/index/icon_08_yc.png" /> --> <span></span> <p>伊春</p> </a> </li> 
+       <li class="qthh"> <a href="javascript:void(0)"> 
+         <!-- <img src="images/index/icon_09_qth.png" /> --> <span></span> <p>七台河</p> </a> </li> 
+       <li class="hgg"> <a href="javascript:void(0)"> 
+         <!-- <img src="images/index/icon_10_hg.png" /> --> <span></span> <p>鹤岗</p> </a> </li> 
+       <li class="hhdjw"> <a href="javascript:void(0)"> 
+         <!-- <img src="images/index/icon_11_hh.png" /> --> <span></span> <p>黑河</p> </a> </li> 
+       <li class="shh"> <a href="javascript:void(0)"> 
+         <!-- <img src="images/index/icon_12_sh.png" /> --> <span></span> <p>绥化</p> </a> </li> 
+       <li class="dxall"> <a href="javascript:void(0)"> 
+         <!-- <img src="images/index/icon_13_dxal.png" /> --> <span></span> <p>大兴安岭</p> </a> </li> 
+      </ul> 
+      <!--<div class="buguize">原党建联盟布局
+					<div class="hrb"><a href="javascript:void(0)"><img src="images/index/home_titile_bg10_img1.png"></a>
+					</div>
+					<div class="qqhr"><a href="javascript:void(0)"><img
+								src="images/index/home_titile_bg10_img2.png"></a></div>
+					<div class="mdj"><a href="javascript:void(0)"><img src="images/index/home_titile_bg10_img3.png"></a>
+					</div>
+					<div class="jms"><a href="javascript:void(0)"><img src="images/index/home_titile_bg10_img4.png"></a>
+					</div>
+					<div class="dq"><a href="javascript:void(0)"><img src="images/index/home_titile_bg10_img5.png"></a>
+					</div>
+					<div class="jx"><a href="javascript:void(0)"><img src="images/index/home_titile_bg10_img6.png"></a>
+					</div>
+					<div class="sys"><a href="javascript:void(0)"><img src="images/index/home_titile_bg10_img7.png"></a>
+					</div>
+					<div class="yc"><a href="javascript:void(0)"><img src="images/index/home_titile_bg10_img8.png"></a>
+					</div>
+					<div class="hlj"><a href="javascript:void(0)"><img src="images/index/home_titile_bg10_img9.png"></a>
+					</div>
+					<div class="hg"><a href="javascript:void(0)"><img src="images/index/9hg.png"></a>
+					</div>
+					<div class="qth"><a href="javascript:void(0)"><img src="images/index/home_titile_bg10_img10.png"></a></div>
+					<div class="kong"><a href="javascript:void(0)"><img
+								src="images/index/home_titile_bg10_img11.png"></a></div>
+					<div class="hh"><a href="javascript:void(0)"><img src="images/index/home_titile_bg10_img12.png"></a>
+					</div>
+					<div class="sh"><a href="javascript:void(0)"><img src="images/index/home_titile_bg10_img13.png"></a>
+					</div>
+					<div class="dxal"><a href="javascript:void(0)"><img
+								src="images/index/home_titile_bg10_img14.png"></a></div>
+				</div>--> 
+     </div> 
+    </div> 
+   </div> 
+   <!--main end--> 
+   <!--footer star--> 
+   <footer id="footer"> 
+    <!--<div class="copyright">
+			<div><script type="text/javascript">document.write(unescape("%3Cspan id=\'_ideConac\' %3E%3C/span%3E%3Cscript   src=\'http://dcs.conac.cn/js/10/000/0000/60433879/CA100000000604338790002.js\' type=\'text/javascript\'%3E%3C/script%3E"));</script></div>
+			<div>
+			<span>版权所有：中共黑龙江省委组织部，黑龙江省党员干部现代远程教育中心<br /></span>
+			<span>技术支持：黑龙江省党员干部现代远程教育中心 </span>  
+			<span>黑ICP备09015402号-1</span>
+			</div>
+		</div>--> 
+   </footer> 
+   <!--footer end--> 
+   <!--2020/12/27  增加的飘窗--> 
+   <!--<div class="pchang" style="position:fixed;bottom:380px;left:1%;width:230px;height:auto;z-index:9999;">
+				<a href="https://www.ljxfw.gov.cn/hljuaa/login" target="_blank">
+					<img src="images/index/piaochuang0.png" width="100%">
+				</a>
+			</div>--> 
+   <!--2020/12/27  增加的飘窗--> 
+   <!--2022/0/14 增加视频遮罩--> 
+   <!--<div class="ershi">
+				<div class="player">
+					<img class="playIcn" src="https://www.ljxfw.gov.cn/ljxfwWeb/images/index/window_esdan1.png " style='' />
+					<img src="https://www.ljxfw.gov.cn/ljxfwWeb/images/index/window_esdfm.jpg " width="90%" />
+				</div>
+				<a class="videolink" href="https://www.ljxfw.gov.cn/twentyMajorTopics/" target="_blank">
+				</a>
+			</div>--> 
+   <!--<div class="zhehao">
+				<div class="zhezhao_content">
+					<div class="closeer">X</div>
+					<video id="movie" controls autoplay='autoplay' muted>
+						<source src="https://djypt.ljxfw.gov.cn/ljxfw_manager/public/upload/20221015/window_video_zxdgs.mp4" type="video/mp4">
+						<object data="https://djypt.ljxfw.gov.cn/ljxfw_manager/public/upload/20221015/window_video_zxdgs.mp4">
+					    <embed  src="movie.swf">
+					  </object>
+					</video>
+				</div>
+			</div>--> 
+   <!--2022/0/14 增加视频遮罩--> 
+  </div> 
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script> 
+  <!-- 公共参数文档 --> 
+  <script type="text/javascript" src="js/commonParams.js"></script> 
+  <!--导航--> 
+  <script type="text/javascript" src="js/common.js"></script> 
+  <script type="text/javascript" src="js/idangerous.swiper.js"></script> 
+  <script type="text/javascript" src="js/offcanvas.js"></script> 
+  <script type="text/javascript" src="js/propagateModel.js"></script> 
+  <script type="text/javascript" src="js/fullModel.js"></script> 
+  <script type="text/javascript" src="js/jquery.xdomainrequest.min.js"></script> 
+  <script type="text/javascript" src="js/bootstrap.js"></script> 
+  <script type="text/javascript" src="js/layui.all.js"></script> 
+  <script type="text/javascript" src="js/header.js"></script> 
+  <script>
+			//<!--2022/0/14 增加视频遮罩-->
+			var video = document.getElementById("movie");
+			$(".closeer").click(function() {
+				$(".zhehao").animate({
+					width: 'toggle',
+					right: '-50%'
+				}, 200);
+				video.pause();
+			})
+			$(".player").click(function() {
+				$(".zhehao").animate({
+					width: 'toggle',
+					right: '1%'
+				}, 200);
+
+				video.play();
+
+			})
+
+			// 飘窗
+			// var url = common.fullModel_win + '/infoListAPI/getSpecialImageAndInfoList?siteId=' + '047230305DE3ED96A6FF9059DEC05623' + '&imgPageSize=' + 0 + '&infoPageSize=' + 2
+			// $.ajax({
+			// 	type: "GET",
+			// 	url: url,
+			// 	dataTpye: 'json',
+			// 	success: function (res) {
+			// 		$.each(res.obj.infoList, function (i, item) {
+			// 			$(".flutter_win").append(
+			// 				'<li style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: black; font-size: 18px;font-weight: bold;">' + item.title + '</li>'
+			// 			)
+			// 		})
+			// 	},
+			// 	error: function (data) {
+			// 	},
+			// });
+
+			// setInterval(function () {
+			// 	$.ajax({
+			// 		type: "GET",
+			// 		url: url,
+			// 		dataTpye: 'json',
+			// 		success: function (res) {
+			// 			$(".flutter_win").html("");
+			// 			$.each(res.obj.infoList, function (i, item) {
+			// 				$(".flutter_win").append(
+			// 					'<li style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: black; font-size: 18px;font-weight: bold;">' + item.title + '</li>'
+			// 				)
+			// 			})
+			// 		},
+			// 		error: function (data) {
+			// 		},
+			// 	});
+			// }, 3000)
+		</script> 
+  <script>
+			//  	$(function(){
+			//  		//获取答题人数（天一组接口）
+			//  		function dtPeople(){
+			//  			$.ajax({
+			//        		type: "GET",
+			//        		url: 'https://www.ljxfw.gov.cn/gateway2/hlj-exam-activity-portal-hljdt/examStatistics/tjDtPeopleNum',
+			//        		dataTpye: 'json',
+			//        		success: function (res) {
+
+			//        			$(".numP").html(res.obj.dtPeople);
+
+			//        		}
+
+			//        	});
+			//  		}
+			// dtPeople();
+			//  		setInterval(function () {
+			//   		dtPeople()
+
+			//  		},10*1000)
+			//  	})
+
+			var w = $(".swiper1").css("width");
+			//公告下TAB标签效果
+			$("#myTab li").mouseover(function(e) {
+				var i = $(this).index();
+				$("#myTab li").removeClass("active");
+				$(this).addClass("active");
+				$("#myTabContent .tab-pane").removeClass("active in");
+				$("#myTabContent .tab-pane").eq(i).addClass("active in");
+			});
+
+			$(window).load(function() {
+				initSize();
+			});
+			$(window).resize(function() {
+				initSize();
+			});
+
+			function initSize() {
+				var w = $("body").width();
+				var h = (w / 3) * 2;
+				var kjk = $(".stars").height();
+
+				if(w <= 768) {
+					$('.close').css("font-size","30px")
+					$(".swiperHeight").height(h);
+					$(".swiperHeight img").height(h);
+
+					$(".stars").height(h);
+					$(".stars img").height(h);
+					$(".poineerVideo").height(h);
+					$("#yjsjTabContent").height(h);
+					$(".poineerVideo img").height(h);
+					$(".tVColumn").height(h);
+					$(".tVColumn img").height(h);
+					$(".quality").height(h);
+					$(".quality img").height(h);
+					$(".noHeight").height(h);
+				} else {
+					$(".swiperHeight").height(390);
+					$(".swiperHeight img").height(390);
+
+					$(".stars").height(220);
+					$(".stars img").height(220);
+					$(".poineerVideo").height(220);
+					$(".poineerVideo img").height(220);
+					$(".tVColumn").height(220);
+					$(".tVColumn img").height(220);
+					$(".quality").height(220);
+					$(".quality img").height(220);
+					$(".noHeight").height(220);
+				}
+			}
+		</script>   
+ </body>
+</html>
